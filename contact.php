@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $location = $_POST['LOCATION'] ?? '';
     $client = $_POST['CLIENT'] ?? '';
 
-    $to = "priyanshi@decicorns.com";
+    $to = "botmediadigitalmarketing@gmail.com";
     $subject = "New Lead Notification - Website";
 
     $message = "

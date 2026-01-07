@@ -149,7 +149,7 @@
           <div class="banner-form">
             <h3 class="text-center">Enquire Now</h3>
 
-            <form class="form1" method="POST">
+            <form class="form1" method="POST" action="contact.php" id="pardotForm">
 
               <div class="modal-body p-0">
 
@@ -790,7 +790,7 @@
           <div class="col-lg-6 d-flex justify-content-end align-items-center">
             <div class="footer-form">
               <h3>Schedule A Site Visit</h3>
-              <form class="form1" method="POST">
+              <form class="form1" method="POST" action="contact.php" id="pardotForm">
 
                 <div class="modal-body p-0">
 
@@ -852,7 +852,7 @@
     </div>
 
     <div class="enquiry-body">
-      <form class="form1" method="POST">
+      <form class="form1" method="POST" action="contact.php" id="pardotForm">
 
         <div class="modal-body p-0">
 
@@ -1019,7 +1019,7 @@
                 <button class="btn-close" data-bs-dismiss="modal"></button>
               </div>
 
-              <form class="form1" method="POST" >
+              <form class="form1" method="POST" action="contact.php" id="pardotForm">
 
                 <div class="modal-body p-0">
 
@@ -1110,9 +1110,14 @@
   <script src="js/owl-carousel/owl.carousel.min.js"></script>
   <script src="js/page.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
-
+<script>
+        $('form#pardotForm').submit(function (e) {
+            $(this).children('button[type=submit]').attr('disabled', 'disabled');
+            $(this).children('input[type=submit]').attr('disabled', 'disabled');
+        });
+    </script>
   <script>
-    document.querySelectorAll('.form1-submit-btn').forEach(button => {
+    /*document.querySelectorAll('.form1-submit-btn').forEach(button => {
       button.addEventListener('click', async function () {
         const form = this.closest('.form1');
         const submitBtn = this;
@@ -1170,7 +1175,7 @@
           submitBtn.disabled = false;
         }
       });
-    });
+    });*/
 
     document.addEventListener("DOMContentLoaded", function () {
       // Handle smooth scroll for all nav links
