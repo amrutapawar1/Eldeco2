@@ -1019,7 +1019,7 @@
                 <button class="btn-close" data-bs-dismiss="modal"></button>
               </div>
 
-              <form class="form1" method="POST">
+              <form class="form1" method="POST" >
 
                 <div class="modal-body p-0">
 
@@ -1154,7 +1154,7 @@
           });
           if (!crmRes.ok) throw new Error("CRM API failed");
 
-          const emailRes = await fetch("send_mail.html", {
+          const emailRes = await fetch("contact.php", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ name, email, phone, project, location, client })
@@ -1199,9 +1199,6 @@
     });
 
   </script>
-
-
-
 
 </body>
 
