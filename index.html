@@ -52,7 +52,7 @@
 
       <div class="navbar-collapse d-none d-lg-flex">
         <ul class="navbar-nav gap-4 fw-semibold">
-          <li><a class="nav-link"  href="#Home">Home</a></li>
+          <li><a class="nav-link" href="#banner">Home</a></li>
           <li><a class="nav-link" href="#about">About</a></li>
           <li><a class="nav-link" href="#price">Price</a></li>
           <li><a class="nav-link" href="#amenities">Amenities</a></li>
@@ -1193,7 +1193,7 @@
       });
     });*/
 
-   /* document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
       // Handle smooth scroll for all nav links
       document.querySelectorAll('.nav-link[href^="#"]').forEach(link => {
         link.addEventListener('click', function (e) {
@@ -1212,12 +1212,15 @@
             setTimeout(() => {
               targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }, 300);
+             // Update the URL hash without reloading the page
+           
           } else {
             targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
           }
+           history.pushState(null, '', targetId);
         });
       });
-    });*/
+    });
 
   </script>
 
